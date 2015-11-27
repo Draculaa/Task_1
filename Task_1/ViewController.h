@@ -10,6 +10,13 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIImageView *inputImageView;
+@property (strong, nonatomic) IBOutlet UIImageView *outputImageView;
+- (IBAction)pushFilterButton:(id)sender;
+- (IBAction)pushSaveButton:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *FilterButton;
+@property (strong, nonatomic) IBOutlet UIButton *saveButton;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 

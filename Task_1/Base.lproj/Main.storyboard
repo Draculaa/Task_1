@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,97 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="73W-VI-luY">
+                                <rect key="frame" x="28" y="28" width="544" height="156"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="156" id="A46-a3-vf7"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Tj-Ga-nlR">
+                                <rect key="frame" x="217" y="205" width="166" height="22"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="9Ph-sk-EQl"/>
+                                    <constraint firstAttribute="height" constant="22" id="ChV-Ow-3rf"/>
+                                    <constraint firstAttribute="width" constant="166" id="av9-6r-9bL"/>
+                                    <constraint firstAttribute="width" constant="166" id="fQq-z1-1Sj"/>
+                                </constraints>
+                                <state key="normal" title="Применить фильтр"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="9Ph-sk-EQl"/>
+                                        <exclude reference="av9-6r-9bL"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="pushFilterButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bnc-u0-SBk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XPB-rg-lQJ">
+                                <rect key="frame" x="220" y="419" width="160" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Wd4-mW-otD"/>
+                                    <constraint firstAttribute="height" constant="30" id="zRw-tY-krg"/>
+                                </constraints>
+                                <state key="normal" title="Сохранить результат"/>
+                                <connections>
+                                    <action selector="pushSaveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BSq-yH-XD1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nTS-8B-i0w">
+                                <rect key="frame" x="28" y="248" width="544" height="150"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="iyS-GQ-52q"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mfF-Tx-Pdw">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="dIr-di-eQr"/>
+                                    <constraint firstAttribute="height" constant="100" id="g0W-pq-kWp"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nTS-8B-i0w" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="4V3-Np-bEf"/>
+                            <constraint firstItem="73W-VI-luY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="6Yq-yb-u9U"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="73W-VI-luY" secondAttribute="trailing" constant="8" id="Dcs-fd-mYx"/>
+                            <constraint firstItem="73W-VI-luY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Fls-em-OvW"/>
+                            <constraint firstItem="mfF-Tx-Pdw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lf2-um-Llt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nTS-8B-i0w" secondAttribute="trailing" constant="8" id="QmM-M0-IVE"/>
+                            <constraint firstItem="4Tj-Ga-nlR" firstAttribute="top" secondItem="73W-VI-luY" secondAttribute="bottom" constant="8" id="STY-Zv-l81"/>
+                            <constraint firstItem="nTS-8B-i0w" firstAttribute="top" secondItem="4Tj-Ga-nlR" secondAttribute="bottom" constant="21" id="TBu-5Q-e9T"/>
+                            <constraint firstItem="XPB-rg-lQJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZRQ-9U-r0q"/>
+                            <constraint firstItem="4Tj-Ga-nlR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eAS-KS-cAC"/>
+                            <constraint firstItem="XPB-rg-lQJ" firstAttribute="top" secondItem="nTS-8B-i0w" secondAttribute="bottom" constant="21" id="hF5-me-UOL"/>
+                            <constraint firstItem="4Tj-Ga-nlR" firstAttribute="top" secondItem="73W-VI-luY" secondAttribute="bottom" constant="21" id="z3X-B0-D6g"/>
+                            <constraint firstItem="mfF-Tx-Pdw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zqX-r1-O78"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="STY-Zv-l81"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="ActivityIndicator" destination="zqX-r1-O78" id="YwL-zq-Ybq"/>
+                        <outlet property="FilterButton" destination="4Tj-Ga-nlR" id="z5I-yI-LeY"/>
+                        <outlet property="activityIndicator" destination="mfF-Tx-Pdw" id="vS5-1b-P22"/>
+                        <outlet property="inputImageView" destination="73W-VI-luY" id="UER-aG-P2U"/>
+                        <outlet property="outputImageView" destination="nTS-8B-i0w" id="XqA-Ek-cjh"/>
+                        <outlet property="saveButton" destination="XPB-rg-lQJ" id="8AS-6l-MjW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="427" y="435"/>
         </scene>
     </scenes>
 </document>
